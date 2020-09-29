@@ -5,13 +5,14 @@ $previews = $this->getVar('previews');
 $raws = $this->getVar('raws');
 $titles = $this->getVar('titles');
 $nb_results = $this->getVar('nb_results');
-
+$vs_mapping = $this->getVar('mapping');
 print "<h1>".$nb_results." résultat".($nb_results>1 ? "s" : "")."</h1>";
 ?>
 
 <form action="<?php print __CA_URL_ROOT__."/index.php/SimpleZ3950/SimpleZ3950/Import"; ?>" method="post">
 	<h2>Liste des résultats</h2>
-	<input type="hidden" name="nb_results" value="<?php print $nb_results;?>" /><br/>
+	<input type="hidden" name="nb_results" value="<?php print $nb_results;?>" />
+	<input type="hidden" name="mapping" value="<?php print $vs_mapping;?>" /><br/>	
 	<?php foreach($va_files as $key=>$file): ?>
 	<div style="clear:both;">
 		<input type="checkbox" name="file_<?php print $key; ?>" value="<?php print $file; ?>"> <?php print $titles[$key]; ?><br/><small><?php print basename($file); ?></small><br/>

@@ -25,6 +25,7 @@
  *
  * ----------------------------------------------------------------------
  */
+ 
 	class SimpleZ3950Plugin extends BaseApplicationPlugin {
 		# -------------------------------------------------------
 		protected $description = 'Simple Z3950 import plugin for Collectiveaccess';
@@ -51,7 +52,7 @@
 				'description' => $this->getDescription(),
 				'errors' => array(),
 				'warnings' => array(),
-				'available' => ((bool)$this->opo_config->get('enabled'))
+				'available' => 1 //((bool)$this->opo_config->get('enabled'))
 			);
 		}
 		# -------------------------------------------------------

@@ -1,1 +1,1 @@
-# SimpleZ3950
+Z39.50 plugin for CollectiveAccess
